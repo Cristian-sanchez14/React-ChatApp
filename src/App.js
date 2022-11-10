@@ -1,5 +1,7 @@
 import './App.css'
 import Register from './components/Register'
+import './style.scss'
+
 function App() {
   return <Register />
 }
