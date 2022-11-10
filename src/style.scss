@@ -17,10 +17,30 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
+
+    .logo {
+      color: darkblue;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .title {
+      color: darkblue;
+      font-size: 24px;
+    }
+
     form {
       display: flex;
       flex-direction: column;
       gap: 15px;
+
+      input {
+        padding: 15px;
+        border: none;
+        width: 250px;
+        border-bottom: 2px solid lightblue;
+      }
     }
   }
 }
