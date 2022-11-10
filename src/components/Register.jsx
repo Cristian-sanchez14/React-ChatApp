@@ -10,7 +10,8 @@ const Register = () => {
           <input type="text" placeholder="display name" />
           <input type="email" placeholder="email" />
           <input type="email" placeholder="password" />
-          <input type="file" />
+          <input style={{ display: 'none' }} type="file" id="file" />
+          <label htmlFor="file">asdfg</label>
           <button>Sign up</button>
         </form>
         <p>You do have an account? Login</p>

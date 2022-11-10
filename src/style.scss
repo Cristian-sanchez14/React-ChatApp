@@ -4,7 +4,7 @@ body {
 }
 
 .formContainer {
-  background-color: gray;
+  background-color: #7b96ec;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -20,13 +20,13 @@ body {
     align-items: center;
 
     .logo {
-      color: darkblue;
+      color: #7b96ec;
       font-weight: bold;
       font-size: 24px;
     }
 
     .title {
-      color: darkblue;
+      color: #7b96ec;
       font-size: 24px;
     }
 
@@ -39,8 +39,28 @@ body {
         padding: 15px;
         border: none;
         width: 250px;
-        border-bottom: 2px solid lightblue;
+        border-bottom: 2px solid rgb(139, 202, 223);
+      &::placeholder {
+        color: rgb(175,175,175)
       }
+      }
+      
+      button {
+        background-color: #7b96ec;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+    
+    //out side of form
+    p {
+      color: #5b5b8d;
+      font-size: 12px;
+      margin-top: 10px;
     }
   }
 }
