@@ -5,7 +5,7 @@ const Chats = () => {
     <div className="chats">
       <div className="userChat">
         <img
-          src="https://images.pexels.com/photos/9135989/pexels-photo-9135989.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+          src="https://images.pexels.com/photos/11638290/pexels-photo-11638290.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
           alt="logo"
         />
         <div className="userChatinfo">
@@ -15,7 +15,7 @@ const Chats = () => {
       </div>
       <div className="userChat">
         <img
-          src="https://images.pexels.com/photos/9135989/pexels-photo-9135989.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+          src="https://images.pexels.com/photos/11638290/pexels-photo-11638290.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
           alt="logo"
         />
         <div className="userChatinfo">
@@ -25,7 +25,7 @@ const Chats = () => {
       </div>
       <div className="userChat">
         <img
-          src="https://images.pexels.com/photos/9135989/pexels-photo-9135989.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+          src="https://images.pexels.com/photos/11638290/pexels-photo-11638290.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
           alt="logo"
         />
         <div className="userChatinfo">
