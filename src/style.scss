@@ -110,11 +110,15 @@ body {
     width: 65%;
     height: 80%;
     display: flex;
+    overflow: hidden;
+    @include tablet{
+      width: 90%;
+    }
 
     .sidebar {
       flex: 1; 
       background-color: #3e3c61;
-      overflow: hidden;
+      position: relative;
     
     .search {
       border-bottom: 1px solid gray;
@@ -178,6 +182,9 @@ body {
 
         .logo {
           font-weight: bold;
+          @include tablet{
+            display: none;
+          }
         }
 
         .user {
@@ -189,6 +196,7 @@ body {
             height: 24px;
             width: 24px;
             border-radius: 50%;
+            object-fit: cover;
           }
 
           button {
@@ -197,6 +205,10 @@ body {
              border: none;
              font-size: 10px;
              cursor: pointer;
+             @include tablet{
+              position: absolute;
+              bottom: 10px;
+            }
           }
         }
 
