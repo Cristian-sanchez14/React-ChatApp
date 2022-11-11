@@ -90,5 +90,42 @@ body {
     border-radius: 10px;
     width: 65%;
     height: 80%;
+    display: flex;
+
+    .sidebar {
+      flex: 1; 
+      border-right: 1px solid white;
+      background-color: #3e3c61;
+      overflow: hidden;
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        background-color: #2f2d52;
+        height: 50px;
+        padding: 10px;
+        justify-content: space-between;
+        color: white;
+
+        .logo {
+          font-weight: bold;
+        }
+
+        .user {
+          display: flex;
+          gap: 10px;
+
+          img{
+            background-color: #ddddf7;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+          }
+        }
+
+
+      }
+    }
+    .chat{flex: 2;}
   }
 }
