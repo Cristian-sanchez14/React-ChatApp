@@ -5,7 +5,10 @@ const Navbar = () => {
     <div className="navbar">
       <span className="logo">Cristian chat</span>
       <div className="user">
-        <img src="" alt="" />
+        <img
+          src="https://images.pexels.com/photos/9135989/pexels-photo-9135989.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+          alt="logo"
+        />
         <span>John</span>
         <button>Logout</button>
       </div>
