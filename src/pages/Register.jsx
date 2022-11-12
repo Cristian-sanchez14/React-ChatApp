@@ -1,10 +1,11 @@
 import React from 'react'
 import Add from '../img/addAvatar.png'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../firebase'
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
+import { auth, storage } from '../firebase'
+import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'
 
 const Register = () => {
-  const { err, setErr } = useState(false)
+  const { err, setErr } = false
   const handleSubmit = async (e) => {
     // prevents from refresching page
     e.preventDefault()
@@ -15,8 +16,31 @@ const Register = () => {
 
     // try error is there is an error creating a profile
     try {
-      // create User With Email And Password NOTE: inizialize Authentication on (firebase.com)
+      // User creates With Email And Password NOTE: inizialize Authentication on (firebase.com)
+      // res = User
       const res = await createUserWithEmailAndPassword(auth, email, password)
+
+      const storageRef = ref(storage, displayName)
+
+      const uploadTask = uploadBytesResumable(storageRef, file)
+
+      // Register three observers
+      uploadTask.on(
+        (error) => {
+          // Handle unsuccessful uploads
+          setErr(true)
+        },
+        () => {
+          // Handle successful uploads on complete
+          // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+            await updateProfile(res.user, {
+              displayName,
+              photosUrl: downloadURL
+            })
+          })
+        }
+      )
     } catch (err) {
       setErr(true)
     }
@@ -38,6 +62,7 @@ const Register = () => {
             <span>Add an Avatar</span>
           </label>
           <button>Sign up</button>
+          {err && <span>Somthing went wrong</span>}
         </form>
         <p>You do have an account? Login</p>
       </div>
