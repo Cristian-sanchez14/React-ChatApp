@@ -5,7 +5,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     //not prevents from refresching page
     e.preventDefault()
-    console.log(e.target[0].value)
+    console.log(e.target[2].value)
   }
 
   return (
@@ -16,7 +16,7 @@ const Register = () => {
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="display name" />
           <input type="email" placeholder="email" />
-          <input type="email" placeholder="password" />
+          <input type="password" placeholder="password" />
           {/* innter style for file */}
           <input style={{ display: 'none' }} type="file" id="file" />
           <label htmlFor="file">
