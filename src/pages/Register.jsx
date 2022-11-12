@@ -2,12 +2,18 @@ import React from 'react'
 import Add from '../img/addAvatar.png'
 
 const Register = () => {
+  const handleSubmit = (e) => {
+    //not prevents from refresching page
+    e.preventDefault()
+    console.log(e.target[0].value)
+  }
+
   return (
     <div className="formContainer">
       <div className="formWrapper">
         <span className="logo">logo</span>
         <span className="title">Register</span>
-        <form>
+        <form onSubmit={handleSubmit}>
           <input type="text" placeholder="display name" />
           <input type="email" placeholder="email" />
           <input type="email" placeholder="password" />
