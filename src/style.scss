@@ -148,6 +148,7 @@ body {
       color: white;
       cursor: pointer;
       
+      
       &:hover {
         background-color: #2f2d52;
       }
@@ -157,16 +158,23 @@ body {
         height: 50px;
         border-radius: 50%;
         object-fit: cover;
+        
       }
 
       .userChatinfo {
         span {
           font-size: 16px;
           font-weight: 500;
+          @include tablet{
+            display: none;
+          }
         }
         P {
           font-size: 14px;
           color: lightgrey;
+          @include tablet{
+            display: none;
+          }
         }
       }
     }
@@ -197,6 +205,7 @@ body {
             width: 24px;
             border-radius: 50%;
             object-fit: cover;
+            
           }
 
           button {
