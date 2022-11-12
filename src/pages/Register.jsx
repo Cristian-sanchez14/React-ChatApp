@@ -4,25 +4,22 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../firebase'
 
 const Register = () => {
-  const handleSubmit = (e) => {
-    //not prevents from refresching page
+  const { err, setErr } = useState(false)
+  const handleSubmit = async (e) => {
+    // prevents from refresching page
     e.preventDefault()
     const displayName = e.target[0].value
     const email = e.target[1].value
     const password = e.target[2].value
     const file = e.target[3].flies[0]
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code
-        const errorMessage = error.message
-        // ..
-      })
+    // try error is there is an error creating a profile
+    try {
+      // create User With Email And Password NOTE: inizialize Authentication on (firebase.com)
+      const res = await createUserWithEmailAndPassword(auth, email, password)
+    } catch (err) {
+      setErr(true)
+    }
   }
 
   return (
